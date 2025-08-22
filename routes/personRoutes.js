@@ -98,5 +98,5 @@ router.delete('/:id', async(req,res)=>{
         console.log(err);
         res.status(500).json({error:"Internal server Error"});
     }
-})
-module.exports = router;
+}) 
+module.exports = router; 
