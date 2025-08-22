@@ -1,0 +1,222 @@
+package.json -: ensure a list of package with their version 
+                analogy : list of cloth you want yo purchase with size and all it also consist of other metadata like name of all
+
+package-lock.json:- ensure detailed of every package installed with version,
+                    sun dependecies , store detailed , discount everything.....
+                    it like a detailed billed
+
+Both files work together to ensure smooth developement for you and your team.   
+
+*Callback Function :- Lets understand first the functions. Like Different ways to write a Function
+                      Then callback functions
+                      Its like a function calling different functions.
+
+Import Files from
+                    Now create a notes json
+                    import file
+                    console.log('notes is starting...')
+
+                    modules exports age=5;
+                    module export.addNumber = function(a,b){}
+
+Server in Node js
+
+Server:- A server is person who communication with clients
+analogy - server=waiter
+          chef=database
+
+          A server is a computer pogram thats responsible for preparing and delivering data to other computers
+          web pages, images , vidoes or any additional information.
+
+JSON : Javascript Object Notation
+
+    - Imagine you are sending a message to your friend and you want to include
+      information like your name, age, and  list of your favarite hobbies.
+
+    - you cant just send the message as is 
+    - you need to organize the information in a way that both you and your friend understand
+
+    -JSON is a bit like this organized format for exchanging data between computers
+
+    -JSON is a lightweight
+    -Structured and organized data because
+    -in most contexts , json is represented as a string  
+     
+What are API and Endpoints?
+    -Imagine a menu card in a restaurant
+    -Lots of options are there each option will give you a different order
+    -Now, collection of that list = Menu card = APIs 
+    -And an option is that list = Endpoints
+    -And the waiter only understand whatever things are written on the menu card
+
+Create a server
+    -Creating a server in node js via express package
+    -Express js is a popular framework for building web application and APIs
+     using Node js
+    -When you create an Express js application you are setting up the 
+     foundation for handling incoming requests and defining how your application
+     responds to them
+
+    -Now we are going to create a server == waiter
+    -Now the waiter has his own Home?
+
+    In simple tearms , "localhost" refers to your own computer . After creating a server in Nodejs 
+    you can access your environment in "localhost".
+
+    -Port Number?
+    -Lets suppose in a building -100 rooms are there, for someone to reach he must know the room number right?
+
+Methos to share data
+    -Now, in the world of web developement we need to deal with data 
+    -how data is set and recieved between a client(like a web browser) 
+     and a sever(built with node js)
+    
+    -so there are lots pf methods out there to send or recieve data according to their needs
+
+    -GET
+    -POST
+    -PATCH
+    -DELETE
+
+
+-GET
+    -Imagine you want to read a book on a library shelf
+    -you dont change anything
+    -you just want to get the information.
+
+    similarly the GET method is used to request data from the server.
+
+    for example, when you enter website URL in your browser.
+    You browser sends a GET request to the server to fetch the web page. 
+
+
+Database
+
+-Web developement = client + server + database
+-ultimately , lets suppose we are going to open restuarant and there is lots
+ of data around it.
+    Number of chefs
+    Each persons detail(like chef, owner, manager, waiter)
+        Name 
+        Age 
+        Work 
+        Mobile number
+        Email 
+        Address 
+        Salary
+
+    Menu Details(like drinks , Snack , main course)
+        Name of dish
+        Price
+        Taste
+        Is_drink
+        Ingredients
+        Number of sales
+
+This is all data we must have to store to run a fully fucntionl restaurant 
+so we have deal with data
+
+Now There are lots of database out there in the market, we can use according to our need
+    -SQL
+    -POSTEGRE SQL
+    -MONGO DB 
+    -ORACLE
+    -MARIA DB
+
+    -Database typically have their own server systems to manage and provide
+     access to the data they store.
+
+    -These database server systems are separate from nodejs servers but 
+     work together to create dynamic and data driven web application.
+
+Node.js Server and Database Server
+
+    -A database server is a specialized computer program or system that manages database.
+     it stores. retrives and manages data efficiently
+    -The database server stores your applications data. When your Node js server need data.
+     it sends requests to the database server. which then retrives and sends the requested 
+     data back to the nodejs server. 
+
+
+    -nodejs server is responsible for handling HTTPs requests from clients(like , web browsers) 
+     and returning responses.
+
+    -It process these requests , communicates with the database server, and sends data to cllents. 
+
+*some commads of Mongodb
+    -mongosh
+    -show dbs 
+    -use db 
+    -db.createCollections("user") //table name 
+    -db.users.insertOne({id: 1, username: 'Alice', age: 25}); //insert data
+
+    -db.users.find()
+[
+  {
+    _id: ObjectId('68983a62ae40aef3eaeec4a9'),
+    id: 1,
+    username: 'Alice',
+    age: 25
+  }
+]
+
+    -db.users.find({age: {$gt:21}})
+    -db.users.find({age: {$lt:24}})
+    -db.users.updateOne({username: 'vipul'}, {$set: {id: 2}})
+    -db.users.updateOne({username: 'vipul'}, {$set: {age: 279}});
+    -db.users.deleteOne({id: 2});
+
+
+Use Mongodb Compass GUI
+
+    *Data Desing and Postman
+    -Now in order to use the database we have to integrate Mongodb with nodejs
+    -Now, there should be a form biult on reactjs or html or css to add chef or person Details
+    -Now currently we dont have a such frontend thing, so we are using Postman fior this
+
+Connect Mongodb with Node js
+
+    -Now to connect MonagoDb with nodejs we need a mongoDb driver(a set of programs)
+    -A mongo db driver is essential when connecting node js with mongodb because it acts
+     a bridge between your node js application and mongodb database
+
+    -MongoDb speaks it own language(protocol) to interact with the database server
+    -Node js communicates in javascripts
+    -The driver translates the javascript code from node js into format that Mongodb can understand and vice versa 
+    -the driver helps you handle errors that might occur during databse interaction. It provides error codes , descriptions, and other details to help you troubleshoot issuses
+    -The most popular driver is the official mongodb nodejs driver also know as
+     the mango package
+
+#Mongoose
+
+     -Mongoose is an Object data modeling(ODM) library for MongoDb and node js
+     -There are lots of reasons we prefer Mongoose rather than a native offcial driver-Things are a lot easier here
+
+     - Mongoose is like a translator betwwen your nodejs and mongodb. it makes working with the database smoother and easier
+     - With Mangoose you can define how your data should look, like making a blueprint for your documents. its like saying , "In our database, each persons information will have a name , age and email." This makes sure your data stays organized
+     -Mongoose helps you make sure the data you put into the databse is correct. its like having someone check if you have wriiten your email adress correctly before spending a message.
+     -Very easy to query from the database
+
+Database Connection
+     -Connect MongoDb with nodejs
+     -Create a file db.js in the root folder
+     -The db.js file you have created is essentially for establishing a connection between ypu node js application and you mongoDb databse
+      using Mongoose library.
+     -So lets import Mongoose Library  
+
+Connection Step by Step
+
+      1.Import Mongoose and define the Mongodb url: In the db.js files you first import the mongoose library and define the definethe url to your MongoDb databse:
+      
+
+
+-What are models or schema? 
+    -Models are like a blueprint of our database.
+    -Its a represrntstion of a specific collection in MongoDb, like a person
+    -Once you have defined a model , you can create, read, update and delete documents in corresponding 
+     mongoDb collection.
+    -Mongoose allows you to define a schema for you documents. A schema is like a blueprint that defines the Structure
+     and data types of your documents within a collection.
+
+-Body Parser
+    body pa
